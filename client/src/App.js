@@ -4,11 +4,13 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
+import CompanyForm from "./components/CompanyForm";
 function App() {
   return (
     <div className="App">
       <Header />
-      <SignIn />
+      {/* <SignUp /> */}
+      <CompanyForm />
       <Footer />
     </div>
   );
