@@ -238,18 +238,26 @@ body,
 
 /* LogIn/SignUp */
 .left-comp {
-    background: #0f32ee;
+    background: #48cae4;
     height: 100%;
     width: 50%;
+    padding: 15%;
+    margin-left: 0px;
+    /* margin-top: 20px; */
+}
+.left_img1{
+    width: 300px;
+    height: 300px;
 }
 
 .right-comp {
-    height: 100%;
+    height: 690px;
     width: 50%;
     margin-left: 50%;
-    background: #315aeb;
+    background: #023e8a;
+    margin-top: -690px;
     padding: 25px 40px;
-    /*margin-bottom: 100%;*/
+    /* margin-bottom: 0px; */
 }
 
 .ff_input {
@@ -296,6 +304,23 @@ body,
     padding-bottom: 5px;
     margin-left: 20px;
 }
+.ff_tlink {
+    color: #d4c3eb;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.8em;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    font-weight: 800;
+  }
+  
+  .ff_title_p {
+    color: #d4c3eb;
+    width: 15px;
+    display: initial;
+  }
+  
+    
 
 .ff {
     margin-bottom: 40px;
