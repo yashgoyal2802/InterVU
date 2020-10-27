@@ -10,42 +10,42 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <div class="footer-basic">
+        <div className="footer-basic">
           <footer>
-            <div class="social">
-              <a href="#">
+            <div className="social">
+              <a className="social_link" href="#">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="#">
+              <a className="social_link" href="#">
                 <FontAwesomeIcon icon={faSnapchatGhost} />
               </a>
-              <a href="#">
+              <a className="social_link" href="#">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#">
+              <a className="social_link" href="#">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
             </div>
-            <ul class="list-inline">
-              <li class="list-inline-item">
+            <ul className="list-inline">
+              <li className="list-inline-item">
                 <a href="#">Home</a>
               </li>
-              <li class="list-inline-item">
+              <li className="list-inline-item">
                 <a href="#">Services</a>
               </li>
-              <li class="list-inline-item">
+              <li className="list-inline-item">
                 <a href="#">About</a>
               </li>
-              <li class="list-inline-item">
+              <li className="list-inline-item">
                 <a href="#">Terms</a>
               </li>
-              <li class="list-inline-item">
+              <li className="list-inline-item">
                 <a href="#" style={{ color: "#0a427a" }}>
                   Privacy Policy
                 </a>
               </li>
             </ul>
-            <p class="copyright">InterVu © 2020</p>
+            <p className="copyright">InterVu © 2020</p>
           </footer>
         </div>
       </footer>
