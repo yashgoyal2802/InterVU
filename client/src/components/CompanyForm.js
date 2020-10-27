@@ -3,40 +3,51 @@ import React from "react";
 const CompanyForm = () => {
   return (
     <div>
-      <div class="left-comp">
-        <img class="left_img1" src="../../public/assets/interview.png" />
+      <div class="left-comp" style={{ padding: "6.55%" }}>
+        <div className="left_comp_list">
+          <button className="comp_select">Google</button>
+        </div>
+        <div className="left_comp_list">
+          <button className="comp_select">Facebook</button>
+        </div>
+        <div className="left_comp_list">
+          <button className="comp_select">LinkedIn</button>
+        </div>
+        <div className="left_comp_list">
+          <button className="comp_select">Amazon</button>
+        </div>
       </div>
-      <div class="right-comp">
-        <div class="ff ff_title">
-          <a class="ff_link ff_tlink" href="#">
-            Amazon
+      <div className="right-comp">
+        <div className="ff ff_title">
+          <a className="ff_link ff_tlink" href="#">
+            Google
           </a>
         </div>
-        <div class="ff">
-          <label class="ff_label">Number of technical rounds</label>
-          <input type="text" class="ff_input" placeholder="0" />
+        <div className="ff">
+          <label className="ff_label">Number of technical rounds</label>
+          <input type="text" className="ff_input" placeholder="0" />
         </div>
-        <div class="ff">
-          <label class="ff_label">Number of non-technical rounds</label>
-          <input type="text" class="ff_input" placeholder="0" />
+        <div className="ff">
+          <label className="ff_label">Number of non-technical rounds</label>
+          <input type="text" className="ff_input" placeholder="0" />
         </div>
         {/* <div class="ff">
           <label class="ff_label">Type of interview</label>
           <input type="text" class="ff_input" placeholder="Offline/Online" />
         </div> */}
-        <div class="ff">
-          <label class="ff_label">Average Duration</label>
-          <input type="text" class="ff_input" placeholder="30 mins" />
+        <div className="ff">
+          <label className="ff_label">Average Duration</label>
+          <input type="text" className="ff_input" placeholder="30 mins" />
+        </div>
+        <div className="ff">
+          <label className="ff_label">Your Exprience</label>
+          <input type="text" className="ff_input" placeholder="Good/Bad" />
         </div>
         <div class="ff">
-          <label class="ff_label">Your Exprience</label>
-          <input type="text" class="ff_input" placeholder="Good/Bad" />
-        </div>
-        <div class="ff">
-          <button class="btn btn-primary ff_btn mr-20" type="button">
+          <button className="btn btn-primary ff_btn mr-20" type="button">
             Add Post
           </button>
-          <a class="ff_link" href="#">
+          <a className="ff_link" href="#">
             Choose a Different Company
           </a>
         </div>

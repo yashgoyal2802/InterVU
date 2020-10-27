@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import signIn from "../assets/interview.png";
 const SignIn = () => {
   return (
     <div>
       <div class="left-comp">
-        <img class="left_img1" src="../../public/assets/interview.png" />
+        <img class="left_img1" src={signIn} />
       </div>
       <div class="right-comp">
         <div class="ff ff_title">
