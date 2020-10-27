@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       <Header />
       <Main />
-      {/* <SignUp />
-      <SignIn /> */}
-      {/* <CompanyForm /> */}
+      <SignUp />
+      <SignIn />
+      <CompanyForm />
 
       <Footer />
     </div>
