@@ -18,6 +18,23 @@ router.post("/addSub", (req, res) => {
             .then((user) => res.json(user))
             .catch((err) => console.log(err));
 });
+
+router.get('/getSubs', function (req, res) {
+  if (req.body.companyName==""||(!req.body.companyName)){
+    Sub.find({}).lean().exec(function (err, subs) {
+    console.log(subs);
+    res.json(subs)
+    });
+   
+  }
+  else{
+  Sub.find({companyName:req.body.companyName},{}).lean().exec(function (err, subs) {
+   console.log(subs);
+   res.json(subs)
+  });
+}
+});
+
 // @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
