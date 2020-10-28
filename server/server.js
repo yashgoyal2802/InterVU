@@ -11,6 +11,10 @@ app.use(
     extended: false,
   })
 );
+var cors = require('cors')
+
+app.use(cors()) // Use this after the variable declaration
+
 app.use(bodyParser.json());
 // DB Config
 const db = require("./config/keys").mongoURI;

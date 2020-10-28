@@ -19,8 +19,9 @@ router.post("/addSub", (req, res) => {
             .catch((err) => console.log(err));
 });
 
-router.get('/getSubs', function (req, res) {
-  if (req.body.companyName==""||(!req.body.companyName)){
+router.get('/getSubs/:companyName', function (req, res) {
+  console.log(req.params.companyName);
+  if (req.params.companyName==""){
     Sub.find({}).lean().exec(function (err, subs) {
     console.log(subs);
     res.json(subs)
@@ -28,11 +29,14 @@ router.get('/getSubs', function (req, res) {
    
   }
   else{
-  Sub.find({companyName:req.body.companyName},{}).lean().exec(function (err, subs) {
+  console.log(req.params.companyName);
+  Sub.find({companyName:req.params.companyName},{}).lean().exec(function (err, subs) {
    console.log(subs);
    res.json(subs)
   });
 }
+  console.log(req.params.companyName);
+
 });
 
 // @route POST api/users/login
