@@ -1,0 +1,23 @@
+{
+  "name": "intervu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"cd /client && npm run build",
+    "install-client": "cd /client && npm install",
+    "heroku-postbuild":"npm run install-client && npm run build"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperBaniya/InterVU.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperBaniya/InterVU/issues"
+  },
+  "homepage": "https://github.com/SuperBaniya/InterVU#readme"
+}
