@@ -7,10 +7,6 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-const set = ()=>{
-  localStorage.setItem('logged',false)
-
-}
 // const Header = () => {
 //   return (
 //     <div>
@@ -131,8 +127,7 @@ const Header = () => {
                   </div>
                 </li> */}
               </ul>
-              {localStorage.getItem('logged')?"":loginbit()}
-              {localStorage.getItem('logged')?logoutbit():''}
+              {localStorage.getItem('logged')=="true"?logoutbit():loginbit()}
             </div>
           </div>
         </nav>
@@ -159,8 +154,9 @@ const loginbit = () => {
 const logoutbit = () => {
   return (<div>
     <span className="navbar-text actions">
-    <a className="btn btn-primary" type="Button" href='/signin'>Switch Account</a>
-  <a className="btn btn-secondary" type="Button" href='/'>{localStorage.getItem('name')}</a>
+      <button className="btn btn-primary" onClick={()=>localStorage.setItem('logged',false)}>logout</button>
+      <a className="btn btn-primary" type="Button" href='/signin'>Switch Account</a>
+      <a className="btn btn-secondary" type="Button" href='/'>{localStorage.getItem('name')}</a>
     </span>
     </div>)
 }
