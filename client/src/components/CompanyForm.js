@@ -5,9 +5,11 @@ class CompanyForm extends React.Component {
     super(props);
     this.state = { companyName: 'Google' ,numberOfTechnicalRounds:0,numberOfNonTechnicalRounds:0,avgDuration:'',yourExperience:''};
   }
+  mySubmitHandler1 = (event) => {
+    localStorage.getItem('logged')?this.mySubmitHandler(event):alert("LOGIN PLS");
+  }
   mySubmitHandler = (event) => {
     event.preventDefault();
-    alert("You are submitting " + this.state.numberOfTechnicalRounds);
     console.log("You are submitting " + this.state.numberOfTechnicalRounds);
     fetch('http://localhost:5001/api/subs/addSub', {
       method: 'POST',
@@ -70,7 +72,6 @@ class CompanyForm extends React.Component {
 
   render() {
     return (
-      <form >
       <div>
       <div class="left-comp" style={{ padding: "6.55%" }}>
         <div className="left_comp_list">
@@ -113,11 +114,10 @@ class CompanyForm extends React.Component {
           <input type="text" className="ff_input" placeholder="Good/Bad" onChange={this.myChangeHandlerYE}/>
         </div>
         <div class="ff">
-          <input className="btn btn-primary ff_btn mr-20" type="Button" value="ADD POST" onClick={this.mySubmitHandler} />
+          <input className="btn btn-primary ff_btn mr-20" type="Button" value="ADD POST" onClick={this.mySubmitHandler1} />
         </div>
       </div>
     </div>
-      </form>
     );
   }
 }

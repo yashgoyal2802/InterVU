@@ -178,6 +178,140 @@ class Home extends React.Component {
                 </div>
               </td>
             </tr>
+            <tr className="h_row">
+              <td className="h_company">
+                Linkedin
+              </td>
+              <td className="h_col">
+                <div className="card">
+                  <div className="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr></tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>No of technical rounds</td>
+                            <td>{numberOfTechnicalRoundsLINKEDIN}</td>
+                          </tr>
+                          <tr>
+                            <td>No of non technical rounds</td>
+                            <td>{numberOfNonTechnicalRoundsLINKEDIN}</td>
+                          </tr>
+                          <tr>
+                            <td>Average Duration</td>
+                            <td>{AverageDurationLINKEDIN}</td>
+                          </tr>
+                          <tr>
+                            <td>Your Expreience 1</td>
+                            <td>{YourExpericenceLINKEDIN}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td className="h_col">
+                <div className="card">
+                  <div className="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr></tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>No of technical rounds</td>
+                            <td>{numberOfTechnicalRoundsLINKEDIN2}</td>
+                          </tr>
+                          <tr>
+                            <td>No of non technical rounds</td>
+                            <td>{numberOfNonTechnicalRoundsLINKEDIN2}</td>
+                          </tr>
+                          <tr>
+                            <td>Average Duration</td>
+                            <td>{AverageDurationLINKEDIN2}</td>
+                          </tr>
+                          <tr>
+                            <td>Your Expreience 1</td>
+                            <td>{YourExpericenceLINKEDIN2}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr className="h_row2">
+              <td className="h_company" style={{ color: "#00020a" }}>
+                Google
+              </td>
+              <td className="h_col">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr></tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>No of technical rounds</td>
+                            <td>{numberOfTechnicalRoundsGOOG}</td>
+                          </tr>
+                          <tr>
+                            <td>No of non technical rounds</td>
+                            <td>{numberOfNonTechnicalRoundsGOOG}</td>
+                          </tr>
+                          <tr>
+                            <td>Average Duration</td>
+                            <td>{AverageDurationGOOG}</td>
+                          </tr>
+                          <tr>
+                            <td>Your Expreience 1</td>
+                            <td>{YourExpericenceGOOG}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td className="h_col">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr></tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>No of technical rounds</td>
+                            <td>{numberOfTechnicalRoundsGOOG2}</td>
+                          </tr>
+                          <tr>
+                            <td>No of non technical rounds</td>
+                            <td>{numberOfNonTechnicalRoundsGOOG2}</td>
+                          </tr>
+                          <tr>
+                            <td>Average Duration</td>
+                            <td>{AverageDurationGOOG2}</td>
+                          </tr>
+                          <tr>
+                            <td>Your Expreience 1</td>
+                            <td>{YourExpericenceGOOG2}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
             {/* <tr style="background: rgb(2,62,138);">
               <td style="width: 200px;padding-top: 100px;padding-left: 80px;color: rgb(255,255,255);">
                 Google
