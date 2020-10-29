@@ -17,15 +17,15 @@ app.use(cors()) // Use this after the variable declaration
 
 app.use(bodyParser.json());
 // DB Config
-if(process.env.NODE_ENV ==='production'){
-const db = process.env.mongoURI;
-const db2 = process.env.mongoURI2;
+// if(process.env.NODE_ENV ==='production'){
+// const db = process.env.mongoURI;
+// const db2 = process.env.mongoURI2;
 
-}
-else{
-const db = process.env.mongoURI||require("./config/keys").mongoURI;
-const db2 = process.env.mongoURI2||require("./config/keys").mongoURI2;
-}
+// }
+// else{
+const db =require("./config/keys").mongoURI;
+const db2 =require("./config/keys").mongoURI2;
+//}
 // Connect to MongoDB
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology:true })
@@ -41,13 +41,13 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 
-if(process.env.NODE_ENV ==='production'){
-  app.use(express.static('../client/build'));
-  app.get("*",(req, res)=>{
-    res.sendFile(path.resolve(__dirname,"../client","build","index.html"));
-  })
+// // if(process.env.NODE_ENV ==='production'){
+// //   app.use(express.static('../client/build'));
+// //   app.get("*",(req, res)=>{
+// //     res.sendFile(path.resolve(__dirname,"../client","build","index.html"));
+// //   })
   
-}
+// }
 // Routes
 app.use("/api/users", users);
 const port = process.env.PORT || 5000;
