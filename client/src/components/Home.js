@@ -1,47 +1,148 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAmazon } from "@fortawesome/free-brands-svg-icons";
+import {
+  faAmazon,
+  faFacebook,
+  faLinkedinIn,
+  faGoogle,
+} from "@fortawesome/free-brands-svg-icons";
 class Home extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
 
-      this.state = {
-          totalReactPackages: null
-      };
+    this.state = {
+      totalReactPackages: null,
+    };
   }
 
   async componentDidMount() {
     // GET request using fetch with async/await
-    const response_amazon = await fetch('http://localhost:5001/api/subs/getSubs/Amazon');
+    const response_amazon = await fetch(
+      "http://localhost:5001/api/subs/getSubs/Amazon"
+    );
     const data_amazon = await response_amazon.json();
     console.log(data_amazon);
-    this.setState({ numberOfTechnicalRoundsAMZN: data_amazon[data_amazon.length-1].numberOfTechnicalRounds,numberOfNonTechnicalRoundsAMZN: data_amazon[data_amazon.length-1].numberOfNonTechnicalRounds,AverageDurationAMZN:data_amazon[data_amazon.length-1].AverageDuration,YourExpericenceAMZN:data_amazon[data_amazon.length-1].YourExpericence,
-      numberOfTechnicalRoundsAMZN2: data_amazon[data_amazon.length-2].numberOfTechnicalRounds,numberOfNonTechnicalRoundsAMZN2: data_amazon[data_amazon.length-2].numberOfNonTechnicalRounds,AverageDurationAMZN2:data_amazon[data_amazon.length-2].AverageDuration,YourExpericenceAMZN2:data_amazon[data_amazon.length-2].YourExpericence  })
+    this.setState({
+      numberOfTechnicalRoundsAMZN:
+        data_amazon[data_amazon.length - 1].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsAMZN:
+        data_amazon[data_amazon.length - 1].numberOfNonTechnicalRounds,
+      AverageDurationAMZN: data_amazon[data_amazon.length - 1].AverageDuration,
+      YourExpericenceAMZN: data_amazon[data_amazon.length - 1].YourExpericence,
+      numberOfTechnicalRoundsAMZN2:
+        data_amazon[data_amazon.length - 2].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsAMZN2:
+        data_amazon[data_amazon.length - 2].numberOfNonTechnicalRounds,
+      AverageDurationAMZN2: data_amazon[data_amazon.length - 2].AverageDuration,
+      YourExpericenceAMZN2: data_amazon[data_amazon.length - 2].YourExpericence,
+    });
 
-    const response_google = await fetch('http://localhost:5001/api/subs/getSubs/Google');
+    const response_google = await fetch(
+      "http://localhost:5001/api/subs/getSubs/Google"
+    );
     const data_google = await response_google.json();
     console.log(data_google);
-    this.setState({ numberOfTechnicalRoundsGOOG: data_google[data_google.length-1].numberOfTechnicalRounds,numberOfNonTechnicalRoundsGOOG: data_google[data_google.length-1].numberOfNonTechnicalRounds,AverageDurationGOOG:data_google[data_google.length-1].AverageDuration,YourExpericenceGOOG:data_google[data_google.length-1].YourExpericence,
-    numberOfTechnicalRoundsGOOG2: data_google[data_google.length-2].numberOfTechnicalRounds,numberOfNonTechnicalRoundsGOOG2: data_google[data_google.length-2].numberOfNonTechnicalRounds,AverageDurationGOOG2:data_google[data_google.length-2].AverageDuration,YourExpericenceGOOG2:data_google[data_google.length-2].YourExpericence  })
+    this.setState({
+      numberOfTechnicalRoundsGOOG:
+        data_google[data_google.length - 1].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsGOOG:
+        data_google[data_google.length - 1].numberOfNonTechnicalRounds,
+      AverageDurationGOOG: data_google[data_google.length - 1].AverageDuration,
+      YourExpericenceGOOG: data_google[data_google.length - 1].YourExpericence,
+      numberOfTechnicalRoundsGOOG2:
+        data_google[data_google.length - 2].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsGOOG2:
+        data_google[data_google.length - 2].numberOfNonTechnicalRounds,
+      AverageDurationGOOG2: data_google[data_google.length - 2].AverageDuration,
+      YourExpericenceGOOG2: data_google[data_google.length - 2].YourExpericence,
+    });
 
-    const response_facebook = await fetch('http://localhost:5001/api/subs/getSubs/Facebook');
+    const response_facebook = await fetch(
+      "http://localhost:5001/api/subs/getSubs/Facebook"
+    );
     const data_facebook = await response_facebook.json();
     console.log(data_facebook);
-    this.setState({ numberOfTechnicalRoundsFB: data_facebook[data_facebook.length-1].numberOfTechnicalRounds,numberOfNonTechnicalRoundsFB: data_facebook[data_facebook.length-1].numberOfNonTechnicalRounds,AverageDurationFB:data_facebook[data_facebook.length-1].AverageDuration,YourExpericenceFB:data_facebook[data_facebook.length-1].YourExpericence,
-    numberOfTechnicalRoundsFB2: data_facebook[data_facebook.length-2].numberOfTechnicalRounds,numberOfNonTechnicalRoundsFB2: data_facebook[data_facebook.length-2].numberOfNonTechnicalRounds,AverageDurationFB2:data_facebook[data_facebook.length-2].AverageDuration,YourExpericenceFB2:data_facebook[data_facebook.length-2].YourExpericence  })
+    this.setState({
+      numberOfTechnicalRoundsFB:
+        data_facebook[data_facebook.length - 1].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsFB:
+        data_facebook[data_facebook.length - 1].numberOfNonTechnicalRounds,
+      AverageDurationFB:
+        data_facebook[data_facebook.length - 1].AverageDuration,
+      YourExpericenceFB:
+        data_facebook[data_facebook.length - 1].YourExpericence,
+      numberOfTechnicalRoundsFB2:
+        data_facebook[data_facebook.length - 2].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsFB2:
+        data_facebook[data_facebook.length - 2].numberOfNonTechnicalRounds,
+      AverageDurationFB2:
+        data_facebook[data_facebook.length - 2].AverageDuration,
+      YourExpericenceFB2:
+        data_facebook[data_facebook.length - 2].YourExpericence,
+    });
 
-    const response_linkedin = await fetch('http://localhost:5001/api/subs/getSubs/Linkedin');
+    const response_linkedin = await fetch(
+      "http://localhost:5001/api/subs/getSubs/Linkedin"
+    );
     const data_linkedin = await response_linkedin.json();
     console.log(data_linkedin);
-    this.setState({ numberOfTechnicalRoundsLINKEDIN: data_linkedin[data_linkedin.length-1].numberOfTechnicalRounds,numberOfNonTechnicalRoundsLINKEDIN: data_linkedin[data_linkedin.length-1].numberOfNonTechnicalRounds,AverageDurationLINKEDIN:data_linkedin[data_linkedin.length-1].AverageDuration,YourExpericenceLINKEDIN:data_linkedin[data_linkedin.length-1].YourExpericence,
-      numberOfTechnicalRoundsLINKEDIN2: data_linkedin[data_linkedin.length-2].numberOfTechnicalRounds,numberOfNonTechnicalRoundsLINKEDIN2: data_linkedin[data_linkedin.length-2].numberOfNonTechnicalRounds,AverageDurationLINKEDIN2:data_linkedin[data_linkedin.length-2].AverageDuration,YourExpericenceLINKEDIN2:data_linkedin[data_linkedin.length-2].YourExpericence  })
-            
-    }
+    this.setState({
+      numberOfTechnicalRoundsLINKEDIN:
+        data_linkedin[data_linkedin.length - 1].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsLINKEDIN:
+        data_linkedin[data_linkedin.length - 1].numberOfNonTechnicalRounds,
+      AverageDurationLINKEDIN:
+        data_linkedin[data_linkedin.length - 1].AverageDuration,
+      YourExpericenceLINKEDIN:
+        data_linkedin[data_linkedin.length - 1].YourExpericence,
+      numberOfTechnicalRoundsLINKEDIN2:
+        data_linkedin[data_linkedin.length - 2].numberOfTechnicalRounds,
+      numberOfNonTechnicalRoundsLINKEDIN2:
+        data_linkedin[data_linkedin.length - 2].numberOfNonTechnicalRounds,
+      AverageDurationLINKEDIN2:
+        data_linkedin[data_linkedin.length - 2].AverageDuration,
+      YourExpericenceLINKEDIN2:
+        data_linkedin[data_linkedin.length - 2].YourExpericence,
+    });
+  }
 
   render() {
-      const { numberOfTechnicalRoundsAMZN,numberOfNonTechnicalRoundsAMZN,AverageDurationAMZN,YourExpericenceAMZN,numberOfTechnicalRoundsAMZN2,numberOfNonTechnicalRoundsAMZN2,AverageDurationAMZN2,YourExpericenceAMZN2,numberOfTechnicalRoundsFB,numberOfNonTechnicalRoundsFB,AverageDurationFB,YourExpericenceFB,numberOfTechnicalRoundsFB2,numberOfNonTechnicalRoundsFB2,AverageDurationFB2,YourExpericenceFB2,numberOfTechnicalRoundsGOOG,numberOfNonTechnicalRoundsGOOG,AverageDurationGOOG,YourExpericenceGOOG,numberOfTechnicalRoundsGOOG2,numberOfNonTechnicalRoundsGOOG2,AverageDurationGOOG2,YourExpericenceGOOG2,numberOfTechnicalRoundsLINKEDIN,numberOfNonTechnicalRoundsLINKEDIN,AverageDurationLINKEDIN,YourExpericenceLINKEDIN,numberOfTechnicalRoundsLINKEDIN2,numberOfNonTechnicalRoundsLINKEDIN2,AverageDurationLINKEDIN2,YourExpericenceLINKEDIN2 } = this.state;
-      return (
-        <div class="table-responsive">
+    const {
+      numberOfTechnicalRoundsAMZN,
+      numberOfNonTechnicalRoundsAMZN,
+      AverageDurationAMZN,
+      YourExpericenceAMZN,
+      numberOfTechnicalRoundsAMZN2,
+      numberOfNonTechnicalRoundsAMZN2,
+      AverageDurationAMZN2,
+      YourExpericenceAMZN2,
+      numberOfTechnicalRoundsFB,
+      numberOfNonTechnicalRoundsFB,
+      AverageDurationFB,
+      YourExpericenceFB,
+      numberOfTechnicalRoundsFB2,
+      numberOfNonTechnicalRoundsFB2,
+      AverageDurationFB2,
+      YourExpericenceFB2,
+      numberOfTechnicalRoundsGOOG,
+      numberOfNonTechnicalRoundsGOOG,
+      AverageDurationGOOG,
+      YourExpericenceGOOG,
+      numberOfTechnicalRoundsGOOG2,
+      numberOfNonTechnicalRoundsGOOG2,
+      AverageDurationGOOG2,
+      YourExpericenceGOOG2,
+      numberOfTechnicalRoundsLINKEDIN,
+      numberOfNonTechnicalRoundsLINKEDIN,
+      AverageDurationLINKEDIN,
+      YourExpericenceLINKEDIN,
+      numberOfTechnicalRoundsLINKEDIN2,
+      numberOfNonTechnicalRoundsLINKEDIN2,
+      AverageDurationLINKEDIN2,
+      YourExpericenceLINKEDIN2,
+    } = this.state;
+    return (
+      <div class="table-responsive">
         <table class="table">
           <tbody>
             <tr className="h_row">
@@ -113,6 +214,7 @@ class Home extends React.Component {
             </tr>
             <tr className="h_row2">
               <td className="h_company" style={{ color: "#00020a" }}>
+                <FontAwesomeIcon icon={faFacebook} />
                 Facebook
               </td>
               <td className="h_col">
@@ -180,6 +282,7 @@ class Home extends React.Component {
             </tr>
             <tr className="h_row">
               <td className="h_company">
+                <FontAwesomeIcon icon={faLinkedinIn} />
                 Linkedin
               </td>
               <td className="h_col">
@@ -247,7 +350,7 @@ class Home extends React.Component {
             </tr>
             <tr className="h_row2">
               <td className="h_company" style={{ color: "#00020a" }}>
-                Google
+                <FontAwesomeIcon icon={faGoogle} /> Google
               </td>
               <td className="h_col">
                 <div class="card">
@@ -408,7 +511,7 @@ class Home extends React.Component {
           </tbody>
         </table>
       </div>
-      );
+    );
   }
 }
 

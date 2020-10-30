@@ -88,7 +88,7 @@ const Header = () => {
         <nav className="navbar navbar-light navbar-expand-md navigation-clean-button">
           <div className="container">
             <a className="brand" href="/">
-              InterVu
+              InterVU
             </a>
             <button
               data-toggle="collapse"
@@ -101,7 +101,7 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navcol-1">
               <ul className="nav navbar-nav mr-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="/Addpost" style={{ fontSize: "25px" }}>
+                  <a className="login" href="/Addpost" style={{ fontSize: "25px" }}>
                     Add Post
                   </a>
                 </li>
@@ -138,7 +138,7 @@ const Header = () => {
 const loginbit = () => {
   return (<div>
     <span className="navbar-text actions">
-      <a className="login" href="/signin">
+      <a className="btn btn-light action-button login" href="/signin">
         Log In
       </a>
       <a
@@ -151,12 +151,17 @@ const loginbit = () => {
     </span>
     </div>)
 }
+const logoutHandle =() =>{
+  localStorage.setItem('logged',false);
+  window.location.href='/';
+
+}
 const logoutbit = () => {
   return (<div>
     <span className="navbar-text actions">
-      <button className="btn btn-primary" onClick={()=>localStorage.setItem('logged',false)}>logout</button>
-      <a className="btn btn-primary" type="Button" href='/signin'>Switch Account</a>
-      <a className="btn btn-secondary" type="Button" href='/'>{localStorage.getItem('name')}</a>
+    <button className="btn btn-primary" onClick={logoutHandle} style = {{marginRight: "15px"}}>logout</button>
+      <a className="btn btn-primary" type="Button" href='/signin' style = {{marginRight: "15px"}}>Switch Account</a>
+      <a className="btn btn-primary"  style = {{marginRight: "15px"}} type="Button" href='/'>{localStorage.getItem('name')}</a>
     </span>
     </div>)
 }

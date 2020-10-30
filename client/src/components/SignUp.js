@@ -7,7 +7,7 @@ import signImg from "../assets/bad.png";
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: '', password:'',password2:'',name:'',mob:''};
+    this.state = { email: '', password:'',password2:'',name:'',passStr:'EnterPass'};
   }
   mySubmitHandler = (event) => {
     console.log("SUBMIT CALLED");
@@ -26,7 +26,8 @@ class SignUp extends React.Component {
     }).then((response) => {
       console.log(response);
       if(response.status === 200){
-          console.log("SUCCESSS")
+          console.log("SUCCESSS");
+          window.location.href='/signin';
           return response.json();     
       }else if(response.status === 408){
           console.log("SOMETHING WENT WRONG")
@@ -51,6 +52,32 @@ console.log("end call api")
   myChangeHandlerP = (event) => {
     this.setState({password: event.target.value,password2: event.target.value});
     console.log(this.state.password);
+    var pass=this.state.password;
+    if(pass.length>=6 && pass.match(/\d/g) && pass.match(/[a-z]/g) && pass.match(/[A-Z]/g)){
+      console.log("Strong");
+      this.setState({ passStr: "Strong" })      
+    }
+    else if(pass.length>=6 && pass.match(/\d/g) && pass.match(/[a-z]/g)){
+      console.log("Medium");
+      this.setState({ passStr: "Medium" })      
+    }
+    else if(pass.length>=6 && (pass.match(/[a-z]/g) || pass.match(/\d/g))){
+      console.log("Weak");
+      this.setState({ passStr: "Weak" })      
+
+    }
+    else if(pass.length==0){
+      console.log("EnterPass");
+      this.setState({ passStr: "EnterPass" })      
+
+    }
+
+    else{
+      console.log("INVAILD");
+      this.setState({ passStr: "Invalid" })      
+
+    }
+
   }
 
   render() {
@@ -78,7 +105,7 @@ console.log("end call api")
             <input type="text" class="ff_input" placeholder="Enter your email" onChange={this.myChangeHandlerE} />
           </div>
           <div class="ff">
-            <label class="ff_label">Password</label>
+            <label class="ff_label">Password (Password must be at least 6 characters)</label>
             <input
               type="password"
               class="ff_input"
@@ -93,6 +120,7 @@ console.log("end call api")
             <a class="ff_link" href="/signiN">
               I  am already a member
             </a>
+    <label className="login">{this.state.passStr}</label>
           </div>
         </div>
       </div>

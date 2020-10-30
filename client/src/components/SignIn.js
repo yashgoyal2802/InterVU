@@ -40,8 +40,7 @@ class SignIn extends React.Component {
       console.log(decoded.name)
       localStorage.setItem('name',decoded.name);
       localStorage.setItem('logged',true);
-      
-
+      window.location.href='/'
   })
   .catch((error) => {
       this.setState({ requestFailed: true })

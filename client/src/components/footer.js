@@ -18,16 +18,16 @@ class Footer extends React.Component {
           <div className="footer-basic">
             <footer>
               <div className="social">
-                <a className="social_link" href="#">
+                <a className="social_link" href="https://www.instagram.com">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a className="social_link" href="#">
+                <a className="social_link" href="https://www.snapchat.com">
                   <FontAwesomeIcon icon={faSnapchatGhost} />
                 </a>
-                <a className="social_link" href="#">
+                <a className="social_link" href="https://www.twitter.com">
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
-                <a className="social_link" href="#">
+                <a className="social_link" href="https://www.fb.com">
                   <FontAwesomeIcon icon={faFacebookF} />
                 </a>
               </div>
